@@ -140,3 +140,31 @@ const filter90AndAbove = (array) => {
 };
 
 // console.log(filter90AndAbove(submissions));
+
+//extended challenge
+
+const createRange = (start, end) => {
+  let rangeArray = [];
+  for (let i = start; i <= end; i++) {
+    rangeArray.push(i);
+  }
+  return rangeArray;
+};
+
+console.log(createRange(10, 20));
+
+let arrayOfStrings = ["a", "b", "c", "a", "a", "c"];
+let arrayOfWords = ["Hello", "Hey", "Hello", "Howdy", "Hey"];
+const countElements = (array) => {
+  let newObj = {};
+  array.forEach((str) => {
+    if (newObj.hasOwnProperty(str)) {
+      newObj[str]++;
+    } else {
+      newObj[str] = 1;
+    }
+  });
+  return newObj;
+};
+console.log(countElements(arrayOfStrings));
+console.log(countElements(arrayOfWords));
